@@ -10,8 +10,8 @@
 */
 
 
-#include "minizip/zip.h"
-#include "minizip/unzip.h"
+#include "zip.h"
+#include "unzip.h"
 #import <Foundation/Foundation.h>
 
 
