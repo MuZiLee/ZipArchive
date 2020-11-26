@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files        = 'ZipArchive.{h,m}'  
   
   s.subspec 'minizip' do |ss|
-    s.vendored_libraries  = 'minizip/*'
+    ss.source_files  = 'minizip/*'
   end
   
 
