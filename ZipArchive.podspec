@@ -15,11 +15,12 @@ Pod::Spec.new do |s|
   
   s.subspec 'minizip' do |ss|
     ss.source_files  = 'minizip/*'
+    ss.requires_arc = false
   end
   
 
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES', 'OTHER_LDFLAGS' => '-ObjC', 'ENABLE_BITCODE' => 'NO' }
-  s.requires_arc = true
+  s.requires_arc = false
   s.static_framework = true
   
   s.frameworks   = ['UIKit']
