@@ -12,7 +12,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files        = 'ZipArchive.{h,m}'  
-  s.vendored_libraries  = 'minizip/*'
+  
+  s.subspec 'minizip' do |ss|
+    s.vendored_libraries  = 'minizip/*'
+  end
   
 
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES', 'OTHER_LDFLAGS' => '-ObjC', 'ENABLE_BITCODE' => 'NO' }
